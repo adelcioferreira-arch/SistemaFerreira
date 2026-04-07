@@ -35,7 +35,9 @@ public class JFrmPrincipal extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         jMnufornecedor = new javax.swing.JMenuItem();
         jMnusair = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
+        jMnuCompras = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -87,9 +89,24 @@ public class JFrmPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMnucadastros);
 
-        jMenu2.setMnemonic('M');
-        jMenu2.setText("Movimentos");
-        jMenuBar1.add(jMenu2);
+        jMnuCompras.setText("Movimentos");
+
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem1.setMnemonic('m');
+        jMenuItem1.setText("Vendas");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMnuCompras.add(jMenuItem1);
+
+        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem2.setMnemonic('p');
+        jMenuItem2.setText("Compras");
+        jMnuCompras.add(jMenuItem2);
+
+        jMenuBar1.add(jMnuCompras);
 
         setJMenuBar(jMenuBar1);
 
@@ -125,6 +142,10 @@ public class JFrmPrincipal extends javax.swing.JFrame {
     private void jMnucadastrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnucadastrosActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMnucadastrosActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -163,8 +184,10 @@ public class JFrmPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenu jMnuCompras;
     private javax.swing.JMenu jMnucadastros;
     private javax.swing.JMenuItem jMnuclientes;
     private javax.swing.JMenuItem jMnufornecedor;
