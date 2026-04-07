@@ -4,6 +4,8 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author u1845853
@@ -104,9 +106,19 @@ public class JDlgMpvUsuarios extends javax.swing.JDialog {
 
         jBtnExluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Excluir.png"))); // NOI18N
         jBtnExluir.setText("Excluir");
+        jBtnExluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnExluirActionPerformed(evt);
+            }
+        });
 
         jBtnPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pesquisar.png"))); // NOI18N
         jBtnPesquisar.setText("Pesquisar");
+        jBtnPesquisar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnPesquisarActionPerformed(evt);
+            }
+        });
 
         jBtnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cancelar.png"))); // NOI18N
         jBtnCancelar.setText("Cancelar");
@@ -227,7 +239,7 @@ public class JDlgMpvUsuarios extends javax.swing.JDialog {
 
     private void jBtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCancelarActionPerformed
         // TODO add your handling code here:
-        desabilitar();
+        habilitar(false);
     }//GEN-LAST:event_jBtnCancelarActionPerformed
 
     private void jBtnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnConfirmarActionPerformed
@@ -235,21 +247,32 @@ public class JDlgMpvUsuarios extends javax.swing.JDialog {
         desabilitar();
     }//GEN-LAST:event_jBtnConfirmarActionPerformed
 
+    private void jBtnExluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExluirActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showConfirmDialog(null, "Confirma a exclusão");
+    }//GEN-LAST:event_jBtnExluirActionPerformed
+
+    private void jBtnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPesquisarActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showInputDialog(null,"Entre com a chave primária");
+    }//GEN-LAST:event_jBtnPesquisarActionPerformed
+
     
-    public void habilitar(){
-        jTxtcodigo.setEnabled(true);
-        jTxtnome.setEnabled(true);
-        jTxtapelido.setEnabled(true);
-        jFmtCpf.setEnabled(true);
-        jFmtDataNascimento.setEnabled(true);
-        jCboNivel.setEnabled(true);
-        jPwfSenha.setEnabled(true);
-        jChbAtivo.setEnabled(true);
-        jBtnCancelar.setEnabled(true);
-        jBtnIncluir.setEnabled(false);
-        jBtnAlterar.setEnabled(false);
-        jBtnExluir.setEnabled(false);
-        jBtnPesquisar.setEnabled(false);
+    public void habilitar(boolean valor){
+        jTxtcodigo.setEnabled(valor);
+        jTxtnome.setEnabled(valor);
+        jTxtapelido.setEnabled(valor);
+        jFmtCpf.setEnabled(valor);
+        jFmtDataNascimento.setEnabled(valor);
+        jCboNivel.setEnabled(valor);
+        jPwfSenha.setEnabled(valor);
+        jChbAtivo.setEnabled(valor);
+        jBtnCancelar.setEnabled(valor);
+        
+        jBtnIncluir.setEnabled(!valor);
+        jBtnAlterar.setEnabled(!valor);
+        jBtnExluir.setEnabled(!valor);
+        jBtnPesquisar.setEnabled(!valor);
         
       
     }
