@@ -8,12 +8,12 @@ package view;
  *
  * @author u06053705160
  */
-public class JFrmPrincipal extends javax.swing.JFrame {
+public class JFrmFerreiraPrincipal extends javax.swing.JFrame {
 
     /**
      * Creates new form JFrmPrincipal
      */
-    public JFrmPrincipal() {
+    public JFrmFerreiraPrincipal() {
         initComponents();
         setTitle("Sistema do IFMS");
         setExtendedState( MAXIMIZED_BOTH);
@@ -126,7 +126,7 @@ public class JFrmPrincipal extends javax.swing.JFrame {
 
     private void jMnuusuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnuusuariosActionPerformed
         // TODO add your handling code here:
-        JDlgMpvUsuarios jDlgMpvUsuarios = new JDlgMpvUsuarios(null, true);
+        JDlgFerreiraClientes jDlgMpvUsuarios = new JDlgFerreiraClientes(null, true);
         jDlgMpvUsuarios.setVisible(true);
     }//GEN-LAST:event_jMnuusuariosActionPerformed
 
@@ -164,20 +164,21 @@ public class JFrmPrincipal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JFrmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFrmFerreiraPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JFrmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFrmFerreiraPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JFrmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFrmFerreiraPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JFrmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFrmFerreiraPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JFrmPrincipal().setVisible(true);
+                new JFrmFerreiraPrincipal().setVisible(true);
                 
             }
         });
