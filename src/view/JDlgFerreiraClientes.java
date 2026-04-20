@@ -393,6 +393,9 @@ public final class JDlgFerreiraClientes extends javax.swing.JDialog {
         JOptionPane.showMessageDialog(null, "Salvo com sucesso!");
         if (TxtNome.getText().isEmpty()) {
         JOptionPane.showMessageDialog(null, "Digite o nome!");
+        if (TxtCpf.getText().isEmpty()) {
+        JOptionPane.showMessageDialog(null, "Digite o CPF!");
+}
 }
     }//GEN-LAST:event_jBtnConfirmarActionPerformed
 
