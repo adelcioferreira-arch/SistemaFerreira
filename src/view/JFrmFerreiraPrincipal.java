@@ -132,6 +132,8 @@ public class JFrmFerreiraPrincipal extends javax.swing.JFrame {
 
     private void jMnuclientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnuclientesActionPerformed
         // TODO add your handling code here:
+        JDlgFerreiraClientes tela = new JDlgFerreiraClientes(this, true);
+        tela.setVisible(true);
     }//GEN-LAST:event_jMnuclientesActionPerformed
 
     private void jMnusairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnusairActionPerformed
