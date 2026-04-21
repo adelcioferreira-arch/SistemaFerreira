@@ -10,11 +10,11 @@ import javax.swing.JOptionPane;
  *
  * @author u1845853
  */
-public final class JDlgFerreiraClientes extends javax.swing.JDialog {
+public final class JDlgFerreiraFornecedor extends javax.swing.JDialog {
     
     public void habilitarCampos(boolean status) {
     TxtNome.setEnabled(status);
-    TxtCpf.setEnabled(status);
+    TxtCnpj.setEnabled(status);
     TxtRg.setEnabled(status);
     TxtDataNascimento.setEnabled(status);
     TxtEmail.setEnabled(status);
@@ -39,7 +39,7 @@ public final class JDlgFerreiraClientes extends javax.swing.JDialog {
 }
    public void limparCampos() {
     TxtNome.setText("");
-    TxtCpf.setText("");
+    TxtCnpj.setText("");
     TxtRg.setText("");
     TxtDataNascimento.setText("");
     TxtEmail.setText("");
@@ -59,11 +59,11 @@ public final class JDlgFerreiraClientes extends javax.swing.JDialog {
      * @param parent
      * @param modal
      */
-    public JDlgFerreiraClientes(java.awt.Frame parent, boolean modal) {
+    public JDlgFerreiraFornecedor(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
 //        habilitarCampos(false);
-        setTitle("Cadastro de Clientes");
+        setTitle("Cadastro de Fornecedor");
         setLocationRelativeTo(null);
         controlarBotoes(false);
     }
@@ -84,7 +84,7 @@ public final class JDlgFerreiraClientes extends javax.swing.JDialog {
         jLabel3 = new javax.swing.JLabel();
         TxtCelular = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        TxtCpf = new javax.swing.JFormattedTextField();
+        TxtCnpj = new javax.swing.JFormattedTextField();
         jLabel5 = new javax.swing.JLabel();
         TxtDataNascimento = new javax.swing.JFormattedTextField();
         jLabel6 = new javax.swing.JLabel();
@@ -120,11 +120,11 @@ public final class JDlgFerreiraClientes extends javax.swing.JDialog {
 
         jLabel3.setText("Telefone");
 
-        jLabel4.setText("CPF");
+        jLabel4.setText("CNPJ");
 
-        TxtCpf.addActionListener(new java.awt.event.ActionListener() {
+        TxtCnpj.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TxtCpfActionPerformed(evt);
+                TxtCnpjActionPerformed(evt);
             }
         });
 
@@ -253,7 +253,7 @@ public final class JDlgFerreiraClientes extends javax.swing.JDialog {
                                             .addGroup(layout.createSequentialGroup()
                                                 .addComponent(TxtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(18, 18, 18)
-                                                .addComponent(TxtCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addComponent(TxtCnpj, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(layout.createSequentialGroup()
                                                 .addGap(10, 10, 10)
@@ -318,7 +318,7 @@ public final class JDlgFerreiraClientes extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(TxtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TxtCpf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TxtCnpj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(TxtRg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -393,7 +393,7 @@ public final class JDlgFerreiraClientes extends javax.swing.JDialog {
         JOptionPane.showMessageDialog(null, "Salvo com sucesso!");
         if (TxtNome.getText().isEmpty()) {
         JOptionPane.showMessageDialog(null, "Digite o nome!");
-        if (TxtCpf.getText().isEmpty()) {
+        if (TxtCnpj.getText().isEmpty()) {
         JOptionPane.showMessageDialog(null, "Digite o CPF!");
 }
 }
@@ -414,9 +414,9 @@ public final class JDlgFerreiraClientes extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_TxtRgActionPerformed
 
-    private void TxtCpfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtCpfActionPerformed
+    private void TxtCnpjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtCnpjActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_TxtCpfActionPerformed
+    }//GEN-LAST:event_TxtCnpjActionPerformed
 
     private void TxtDataNascimentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtDataNascimentoActionPerformed
         // TODO add your handling code here:
@@ -448,14 +448,26 @@ public final class JDlgFerreiraClientes extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JDlgFerreiraClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JDlgFerreiraFornecedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JDlgFerreiraClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JDlgFerreiraFornecedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JDlgFerreiraClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JDlgFerreiraFornecedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JDlgFerreiraClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JDlgFerreiraFornecedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -463,7 +475,7 @@ public final class JDlgFerreiraClientes extends javax.swing.JDialog {
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(() -> {
-            JDlgFerreiraClientes dialog = new JDlgFerreiraClientes(new javax.swing.JFrame(), true);
+            JDlgFerreiraFornecedor dialog = new JDlgFerreiraFornecedor(new javax.swing.JFrame(), true);
             dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                 @Override
                 public void windowClosing(java.awt.event.WindowEvent e) {
@@ -480,7 +492,7 @@ public final class JDlgFerreiraClientes extends javax.swing.JDialog {
     private javax.swing.JTextField TxtCelular;
     private javax.swing.JTextField TxtCep;
     private javax.swing.JTextField TxtCidade;
-    private javax.swing.JFormattedTextField TxtCpf;
+    private javax.swing.JFormattedTextField TxtCnpj;
     private javax.swing.JFormattedTextField TxtDataNascimento;
     private javax.swing.JTextField TxtEmail;
     private javax.swing.JTextField TxtEndereco;

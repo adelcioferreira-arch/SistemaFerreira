@@ -74,6 +74,11 @@ public class JFrmFerreiraPrincipal extends javax.swing.JFrame {
         jMnufornecedor.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMnufornecedor.setMnemonic('F');
         jMnufornecedor.setText("Fornecedor");
+        jMnufornecedor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMnufornecedorActionPerformed(evt);
+            }
+        });
         jMnucadastros.add(jMnufornecedor);
 
         jMnusair.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_DOWN_MASK));
@@ -126,13 +131,13 @@ public class JFrmFerreiraPrincipal extends javax.swing.JFrame {
 
     private void jMnuusuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnuusuariosActionPerformed
         // TODO add your handling code here:
-        JDlgFerreiraClientes jDlgMpvUsuarios = new JDlgFerreiraClientes(null, true);
+        JDlgFerreiraFornecedor jDlgMpvUsuarios = new JDlgFerreiraFornecedor(null, true);
         jDlgMpvUsuarios.setVisible(true);
     }//GEN-LAST:event_jMnuusuariosActionPerformed
 
     private void jMnuclientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnuclientesActionPerformed
         // TODO add your handling code here:
-        JDlgFerreiraClientes tela = new JDlgFerreiraClientes(this, true);
+        JDlgFerreiraFornecedor tela = new JDlgFerreiraFornecedor(this, true);
         tela.setVisible(true);
     }//GEN-LAST:event_jMnuclientesActionPerformed
 
@@ -148,6 +153,12 @@ public class JFrmFerreiraPrincipal extends javax.swing.JFrame {
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMnufornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnufornecedorActionPerformed
+        // TODO add your handling code here:
+        JDlgFerreiraFornecedor tela = new JDlgFerreiraFornecedor(this, true);
+        tela.setVisible(true);
+    }//GEN-LAST:event_jMnufornecedorActionPerformed
 
     /**
      * @param args the command line arguments
