@@ -35,6 +35,7 @@ public class JFrmFerreiraPrincipal extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         jMnufornecedor = new javax.swing.JMenuItem();
         jMnuProdutos = new javax.swing.JMenuItem();
+        jMenuCategoria = new javax.swing.JMenuItem();
         jMnusair = new javax.swing.JMenuItem();
         jMnuCompras = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -91,6 +92,15 @@ public class JFrmFerreiraPrincipal extends javax.swing.JFrame {
             }
         });
         jMnucadastros.add(jMnuProdutos);
+
+        jMenuCategoria.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_G, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuCategoria.setText("Categoria");
+        jMenuCategoria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuCategoriaActionPerformed(evt);
+            }
+        });
+        jMnucadastros.add(jMenuCategoria);
 
         jMnusair.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMnusair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/exit.png"))); // NOI18N
@@ -177,6 +187,12 @@ public class JFrmFerreiraPrincipal extends javax.swing.JFrame {
         tela.setVisible(true);
     }//GEN-LAST:event_jMnuProdutosActionPerformed
 
+    private void jMenuCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuCategoriaActionPerformed
+        // TODO add your handling code here:
+        JDlgFerreiraCategoria tela = new JDlgFerreiraCategoria(this, true);
+        tela.setVisible(true);
+    }//GEN-LAST:event_jMenuCategoriaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -216,6 +232,7 @@ public class JFrmFerreiraPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuCategoria;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenu jMnuCompras;
