@@ -4,6 +4,8 @@
  */
 package view;
 import dao.UsuariosDAO;
+import conexao.Conexao;
+import java.sql.Connection;
 /**
  *
  * @author ADELCIO
@@ -16,9 +18,15 @@ public class JDlgLogin extends javax.swing.JDialog {
      * Creates new form JDlgLogin
      */
     public JDlgLogin(java.awt.Frame parent, boolean modal) {
-        super(parent, modal);
-        initComponents();
+    super(parent, modal);
+    initComponents();
+
+    Connection conn = Conexao.getConexao();
+
+    if(conn != null){
+        System.out.println("BANCO OK");
     }
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -110,35 +118,30 @@ public class JDlgLogin extends javax.swing.JDialog {
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
 String usuario =
-            lblUsuario.getText();
+        lblUsuario.getText();
 
-    String senha =
-            new String(
-                    lblSenha.getPassword()
-        );
+String senha =
+        new String(lblSenha.getPassword());
 
-    UsuariosDAO dao =
-            new UsuariosDAO();
+UsuariosDAO dao =
+        new UsuariosDAO();
 
-    if (dao.validarLogin(
-            usuario,
-            senha)) {
+if (dao.validarLogin(usuario, senha)) {
 
-        JFrmFerreiraPrincipal tela =
-                new JFrmFerreiraPrincipal();
+    JFrmFerreiraPrincipal tela =
+            new JFrmFerreiraPrincipal();
 
-        tela.setVisible(true);
+    tela.setVisible(true);
 
-        dispose();
+    dispose();
 
-    } else {
+} else {
 
-        javax.swing.JOptionPane
-                .showMessageDialog(
-                        this,
-                        "Usuário ou senha inválidos!"
-                );
-    }
+    javax.swing.JOptionPane.showMessageDialog(
+            this,
+            "Usuário ou senha inválidos!"
+    );
+}
     }//GEN-LAST:event_btnEntrarActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
